@@ -3,6 +3,29 @@ body {
   background: #e5e5e5;
 }
 
+a {
+display: inline-block;
+  position: relative;
+}
+
+a::after { 
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  background: none repeat scroll 0 0 transparent;
+  height: 2px;
+  width: 0;
+  background: #fb6d3a;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+a:hover::after { 
+  width: 100%; 
+  left: 0; 
+}
+
 .main-container {
   display: flex;
   flex-direction: row-reverse;
@@ -151,7 +174,7 @@ body {
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  color: #565e6a;
+  color: white;
 }
 
 .skills-list {
